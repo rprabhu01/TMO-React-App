@@ -23,16 +23,16 @@ const AddReceipe = ( {onAdd}) => {
 
         <form onSubmit = {submitForm}>
             <div>
-                <label>receipe-name</label>
-                <input type = "text"
+                <label for="receipe-name">receipe-name</label>
+                <input type = "textbox"
                 value = {name}
                 onChange = { (e) => setName(e.target.value)}
                 placeholder = "receipe-name"/>
             </div>              
              <br/>
             <div>
-                <label>receipe-instruction</label>
-                <input type = "text"
+                <label for="receipe-instruction">receipe-instruction</label>
+                <input type = "textbox"
                 value = {description}
                 onChange = { (e) => setDescription(e.target.value)}
                 placeholder = "receipe-instruction"/>
