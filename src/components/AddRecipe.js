@@ -25,7 +25,6 @@ const AddRecipe = ( {onAdd}) => {
             <div>
                 <label for="recipe-name">recipe-name</label>
                 <input type = "textbox"
-                role = "textbox"
                 value = {name}
                 onChange = { (e) => setName(e.target.value)}
                 placeholder = "recipe-name"/>
