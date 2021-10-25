@@ -3,7 +3,7 @@
 /*function Header() {
 
     return (
-        <h3> Make Receipe..</h3>
+        <h3> Make Recipe..</h3>
     )
 }*/
 

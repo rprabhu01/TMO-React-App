@@ -1,23 +1,23 @@
 import Header from "./components/Header";
-import AddReceipe from "./components/AddReceipe";
-import Receipies from "./components/Receipies";
+import AddRecipe from "./components/AddRecipe";
+import Recipes from "./components/Recipes";
 
 import { useState } from 'react'
 
 function App() {
 
-  const [receipeList, setReceipes] = useState('')
-  const [showAddReceipe, setShowAddReceipe] = useState(false)
+  const [recipeList, setRecipes] = useState('')
+  const [showAddRecipe, setShowAddRecipe] = useState(false)
 
-  function changeShowReceipe() {
-    setShowAddReceipe(!showAddReceipe)
+  function changeShowRecipe() {
+    setShowAddRecipe(!showAddRecipe)
   }
 
-  const addReceipe = (item) =>{
+  const addRecipe = (item) =>{
 
     const id = Math.random(1,100)+1;
-    const newReceipe = {id,...item};
-    setReceipes([...receipeList, newReceipe])
+    const newRecipe = {id,...item};
+    setRecipes([...recipeList, newRecipe])
   }
 
   return (
@@ -26,10 +26,10 @@ function App() {
       {/* ^ Do not remove this element ^ */}
 
       <center>
-      <Header title = "My Recipes" onAdd = {changeShowReceipe} displayBtn = {!showAddReceipe}/>
-      {receipeList.length > 0 ?<Receipies receipes = {receipeList}/> : 'There are no recipes to list'}
+      <Header title = "My Recipes" onAdd = {changeShowRecipe} displayBtn = {!showAddRecipe}/>
+      {recipeList.length > 0 ?<Recipes recipes = {recipeList}/> : 'There are no recipes to list'}
       <br/>
-     {showAddReceipe && <AddReceipe onAdd = {addReceipe}/>}
+     {showAddRecipe && <AddRecipe onAdd = {addRecipe}/>}
      </center>
      
     </div>

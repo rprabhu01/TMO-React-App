@@ -1,5 +1,5 @@
 import { useState } from "react"
-const AddReceipe = ( {onAdd}) => {
+const AddRecipe = ( {onAdd}) => {
 
     const[name, setName] = useState('')
     const[description, setDescription] = useState('')
@@ -9,7 +9,7 @@ const AddReceipe = ( {onAdd}) => {
         event.preventDefault();
 
         if (!name) {
-            alert('Enter Receipe Name..')
+            alert('Enter Recipe Name..')
             return;
         }
 
@@ -23,19 +23,19 @@ const AddReceipe = ( {onAdd}) => {
 
         <form onSubmit = {submitForm}>
             <div>
-                <label for="receipe-name">receipe-name</label>
+                <label for="recipe-name">recipe-name</label>
                 <input type = "textbox"
                 value = {name}
                 onChange = { (e) => setName(e.target.value)}
-                placeholder = "receipe-name"/>
+                placeholder = "recipe-name"/>
             </div>              
              <br/>
             <div>
-                <label for="receipe-instruction">receipe-instruction</label>
+                <label for="recipe-instruction">recipe-instruction</label>
                 <input type = "textbox"
                 value = {description}
                 onChange = { (e) => setDescription(e.target.value)}
-                placeholder = "receipe-instruction"/>
+                placeholder = "recipe-instruction"/>
             </div>
 
          <input type="submit" value = "Submit"/>
@@ -43,4 +43,4 @@ const AddReceipe = ( {onAdd}) => {
     )
 }
 
-export default AddReceipe
+export default AddRecipe
