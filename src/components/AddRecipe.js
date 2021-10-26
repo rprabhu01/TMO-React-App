@@ -22,28 +22,25 @@ const AddRecipe = ( {onAdd}) => {
     return(
 
         <form onSubmit = {submitForm}>
-            <div>
-               <label>
-                  recipe-name:
+           
+               <label for="recipe-name">recipe-name</label>
                   <input type = "textbox"
                    value = {name}
+                   name = "recipe-name"
                    onChange = { (e) => setName(e.target.value)}
                    placeholder = "recipe-name"/>
-               </label>
                
-            </div>              
-            
-            <div>
-
-                <label>
-                  recipe-instruction:
+               
+                        
+                <label for="recipe-instruction">recipe-instruction </label>
                 <input type = "textbox"
                   value = {description}
+                  name  = "recipe-instruction"
                   onChange = { (e) => setDescription(e.target.value)}
                   placeholder = "recipe-instruction"/>
-                </label>
+                
                
-            </div>
+            
 
          <input type="submit" value = "Submit"/>
         </form>
