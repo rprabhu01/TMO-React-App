@@ -24,7 +24,7 @@ const AddRecipe = ( {onAdd}) => {
         <form onSubmit = {submitForm}>
            
                <label for="recipe-name">recipe-name</label>
-                  <input type = "textbox"
+                  <input type = "text"
                    value = {name}
                    name = "recipe-name"
                    onChange = { (e) => setName(e.target.value)}
@@ -33,7 +33,7 @@ const AddRecipe = ( {onAdd}) => {
                
                         
                 <label for="recipe-instruction">recipe-instruction </label>
-                <input type = "textbox"
+                <input type = "text"
                   value = {description}
                   name  = "recipe-instruction"
                   onChange = { (e) => setDescription(e.target.value)}
